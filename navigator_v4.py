@@ -12,12 +12,14 @@ from playwright.async_api import async_playwright
 from selector_strategy import SelectorStrategy
 from memory_interface import MemoryInterface
 from log_writer import LogWriter
+from strategy_scorer import StrategyScorer
 
 # Paths
 INTENTS_FILE = Path(__file__).parent / "intents.json"
 MEMORY_FILE = Path(__file__).parent / "memory.json"
 SCREENSHOT_DIR = Path(__file__).parent / "screenshots"
 LOGS_DIR = Path(__file__).parent / "logs"
+STATS_FILE = Path(__file__).parent / "strategy_stats.json"
 
 # Utility to load JSON
 def load_json(path):
@@ -36,9 +38,10 @@ async def main():
         print("❌ No intent found for 'click_gmail'")
         return
 
-    # Initialize memory interface and logging
+    # Initialize memory interface, logging, and strategy scoring
     memory = MemoryInterface(MEMORY_FILE)
     log = LogWriter(LOGS_DIR)
+    scorer = StrategyScorer(STATS_FILE)
     target_url = "https://google.com"
     domain = extract_domain(target_url)
     intent_name = "click_gmail"
@@ -57,15 +60,22 @@ async def main():
             print(f"🧠 Found remembered strategy: {remembered_strategy['successful_selector']}")
             log.log_memory_strategy(remembered_strategy['successful_selector'])
 
+        # Optimize intent fallbacks based on historical performance
+        optimized_intent = scorer.reorder_fallbacks(intent, domain, intent_name)
+        log.log_event(f"Strategy reordering applied for {domain}/{intent_name}")
+
         selector_strategy = SelectorStrategy(page, memory)
         
         try:
-            element, strategy = await selector_strategy.find_element_by_intent(intent, domain, intent_name)
+            element, strategy = await selector_strategy.find_element_by_intent(optimized_intent, domain, intent_name)
             log.log_attempt(strategy)
 
             if element:
                 print(f"✅ Found Gmail using strategy: {strategy}")
                 log.log_success(strategy)
+                
+                # Record successful strategy in scorer
+                scorer.record_result(domain, intent_name, strategy, success=True)
                 
                 # Store successful strategy in memory
                 memory.store(domain, intent_name, strategy)
@@ -81,10 +91,15 @@ async def main():
             else:
                 print("❌ Failed to locate Gmail link")
                 log.log_failure("Element not found with any strategy")
+                
+                # Record failure for all attempted strategies
+                # Note: In a more detailed implementation, we'd track each individual attempt
+                scorer.record_result(domain, intent_name, "all_strategies", success=False)
         
         except Exception as e:
             print(f"❌ Navigation failed: {str(e)}")
             log.log_failure(e)
+            scorer.record_result(domain, intent_name, "navigation_error", success=False)
         
         finally:
             # Save log regardless of success/failure
