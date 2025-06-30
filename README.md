@@ -2,6 +2,11 @@
 
 **Kai_WebNavigator** is an intelligent, DOM-driven automation agent that interacts with web pages like a reasoning assistant, not just a script. It learns from each visit, logs its decisions, and grows smarter over time.
 
+## Governance & Ethics
+
+Please see our [Federated AI Learning Charter v1.0](./Federated_AI_Learning_Charter_v1.0.md)  
+for the principles, rights, responsibilities, and governance of this federated AI system.
+
 ---
 
 ## 🚀 Version: v1.2 (June 2025)
