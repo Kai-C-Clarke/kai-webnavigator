@@ -1,1 +1,11 @@
-{}
+{
+  "click_gmail": {
+    "primary_selector": "text=Gmail",
+    "timeout": 3000,
+    "fallbacks": [
+      { "method": "aria-label", "value": "Gmail" },
+      { "method": "text-contains", "value": "Inbox" },
+      { "method": "xpath", "value": "//a[contains(@href,'gmail')]" }
+    ]
+  }
+}
