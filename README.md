@@ -4,7 +4,7 @@
 
 ## Governance & Ethics
 
-Please see our [Federated AI Learning Charter v1.0](./Federated_AI_Learning_Charter_v1.0.md)  
+Please see our [(./Federated_AI_Learning_Charter_v1.0.md)](https://github.com/Kai-C-Clarke/kai-webnavigator/blob/main/Federated%20AI%20Learning%20Charter%20v1.0)  
 for the principles, rights, responsibilities, and governance of this federated AI system.
 
 ---
