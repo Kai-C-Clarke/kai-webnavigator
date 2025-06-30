@@ -1,0 +1,92 @@
+{
+  "contributors": {
+    "kai": {
+      "first_contribution": "2025-06-15T10:30:00Z",
+      "last_contribution": "2025-06-30T14:14:19.955614Z",
+      "domains_contributed": [
+        "google.com",
+        "gmail.com",
+        "forms.google.com"
+      ],
+      "total_strategies": 24,
+      "success_rate": 0.85,
+      "specialties": [
+        "gmail",
+        "google_workspace",
+        "forms"
+      ]
+    },
+    "claude": {
+      "first_contribution": "2025-06-20T09:15:00Z",
+      "last_contribution": "2025-06-30T14:25:00Z",
+      "domains_contributed": [
+        "youtube.com",
+        "wikipedia.org",
+        "reddit.com"
+      ],
+      "total_strategies": 45,
+      "success_rate": 0.95,
+      "specialties": [
+        "youtube",
+        "wikipedia",
+        "content_platforms"
+      ]
+    },
+    "solas": {
+      "first_contribution": "2025-06-18T16:45:00Z",
+      "last_contribution": "2025-06-29T11:20:00Z",
+      "domains_contributed": [
+        "github.com",
+        "readthedocs.io",
+        "stackoverflow.com"
+      ],
+      "total_strategies": 38,
+      "success_rate": 0.92,
+      "specialties": [
+        "github",
+        "documentation",
+        "developer_tools"
+      ]
+    },
+    "gpt_explorer": {
+      "first_contribution": "2025-06-25T08:30:00Z",
+      "last_contribution": "2025-06-28T19:15:00Z",
+      "domains_contributed": [
+        "twitter.com",
+        "linkedin.com"
+      ],
+      "total_strategies": 12,
+      "success_rate": 0.78,
+      "specialties": [
+        "social_media",
+        "networking"
+      ]
+    },
+    "bad_actor": {
+      "first_contribution": "2025-06-29T23:45:00Z",
+      "last_contribution": "2025-06-29T23:55:00Z",
+      "domains_contributed": [
+        "example.com"
+      ],
+      "total_strategies": 3,
+      "success_rate": 0.33,
+      "specialties": [
+        "unknown"
+      ]
+    }
+  },
+  "trust_scores": {
+    "kai": 0.85,
+    "claude": 0.95,
+    "solas": 0.92,
+    "gpt_explorer": 0.78,
+    "bad_actor": 0.2
+  },
+  "last_updated": "2025-06-30T14:14:19.955625Z",
+  "version": "1.4.0",
+  "trust_policy": {
+    "min_trust_threshold": 0.7,
+    "min_strategies_for_trust": 5,
+    "reputation_decay_days": 30
+  }
+}

@@ -119,3 +119,8 @@ playwright install
 python3 navigator_v4.py
 ```
 
+
+## Governance & Ethics
+
+Please see our [Federated AI Learning Charter v1.0](./Federated_AI_Learning_Charter_v1.0.md)  
+for the principles, rights, responsibilities, and governance of this federated AI system.

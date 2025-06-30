@@ -1,11 +1,144 @@
 {
+  "click_search_bar": {
+    "primary_selector": "input[name='search_query']",
+    "timeout": 5000,
+    "fallbacks": [
+      { "method": "aria-label", "value": "Search" },
+      { "method": "xpath", "value": "//input[@placeholder='Search']" },
+      { "method": "text-contains", "value": "search" }
+    ]
+  },
   "click_gmail": {
-    "primary_selector": "text=Gmail",
+    "primary_selector": "a[href*='gmail']",
     "timeout": 3000,
     "fallbacks": [
+      { "method": "text-contains", "value": "Gmail" },
       { "method": "aria-label", "value": "Gmail" },
-      { "method": "text-contains", "value": "Inbox" },
-      { "method": "xpath", "value": "//a[contains(@href,'gmail')]" }
+      { "method": "xpath", "value": "//a[contains(@href, 'gmail')]" }
     ]
+  },
+  "click_first_video": {
+    "primary_selector": "#contents ytd-rich-item-renderer:first-child a",
+    "timeout": 5000,
+    "fallbacks": [
+      { "method": "xpath", "value": "//ytd-rich-item-renderer[1]//a[@id='video-title-link']" },
+      { "method": "xpath", "value": "//a[@id='video-title-link']" },
+      { "method": "text-contains", "value": "video" }
+    ]
+  },
+  "click_subscribe_button": {
+    "primary_selector": "button[aria-label*='Subscribe']",
+    "timeout": 4000,
+    "fallbacks": [
+      { "method": "aria-label", "value": "Subscribe" },
+      { "method": "text-contains", "value": "Subscribe" },
+      { "method": "xpath", "value": "//button[contains(text(), 'Subscribe')]" }
+    ]
+  },
+  "click_new_repository": {
+    "primary_selector": "a[href='/new']",
+    "timeout": 4000,
+    "fallbacks": [
+      { "method": "text-contains", "value": "New repository" },
+      { "method": "aria-label", "value": "Create new repository" },
+      { "method": "xpath", "value": "//a[contains(@href, '/new')]" }
+    ]
+  },
+  "click_issues_tab": {
+    "primary_selector": "a[data-content='Issues']",
+    "timeout": 3000,
+    "fallbacks": [
+      { "method": "text-contains", "value": "Issues" },
+      { "method": "aria-label", "value": "Issues" },
+      { "method": "xpath", "value": "//a[contains(text(), 'Issues')]" }
+    ]
+  },
+  "click_fork_button": {
+    "primary_selector": "button[data-hydro-click*='fork']",
+    "timeout": 4000,
+    "fallbacks": [
+      { "method": "aria-label", "value": "Fork" },
+      { "method": "text-contains", "value": "Fork" },
+      { "method": "xpath", "value": "//button[contains(text(), 'Fork')]" }
+    ]
+  },
+  "click_images": {
+    "primary_selector": "a[href*='tbm=isch']",
+    "timeout": 3000,
+    "fallbacks": [
+      { "method": "text-contains", "value": "Images" },
+      { "method": "aria-label", "value": "Images" },
+      { "method": "xpath", "value": "//a[contains(@href, 'tbm=isch')]" }
+    ]
+  },
+  "click_login": {
+    "primary_selector": "a[href*='login'], button[type='submit']",
+    "timeout": 4000,
+    "fallbacks": [
+      { "method": "text-contains", "value": "Sign in" },
+      { "method": "text-contains", "value": "Log in" },
+      { "method": "aria-label", "value": "Sign in" },
+      { "method": "xpath", "value": "//a[contains(text(), 'Sign in')] | //button[contains(text(), 'Log in')]" }
+    ]
+  },
+  "accept_cookies": {
+    "primary_selector": "button[id*='accept']",
+    "timeout": 3000,
+    "fallbacks": [
+      { "method": "text-contains", "value": "Accept all" },
+      { "method": "text-contains", "value": "I agree" },
+      { "method": "text-contains", "value": "Accept" },
+      { "method": "xpath", "value": "//button[contains(text(), 'Accept')]" },
+      { "method": "aria-label", "value": "Accept all" }
+    ]
+  },
+  "reject_cookies": {
+    "primary_selector": "button[id*='reject']",
+    "timeout": 3000,
+    "fallbacks": [
+      { "method": "text-contains", "value": "Reject all" },
+      { "method": "text-contains", "value": "Decline" },
+      { "method": "text-contains", "value": "No thanks" },
+      { "method": "xpath", "value": "//button[contains(text(), 'Reject')]" },
+      { "method": "aria-label", "value": "Reject all" }
+    ]
+  },
+  "close_popup": {
+    "primary_selector": "button[aria-label*='close'], button.close",
+    "timeout": 2000,
+    "fallbacks": [
+      { "method": "text-contains", "value": "×" },
+      { "method": "text-contains", "value": "Close" },
+      { "method": "aria-label", "value": "Close" },
+      { "method": "xpath", "value": "//button[@aria-label='Close'] | //button[contains(@class, 'close')]" }
+    ]
+  },
+  "accept_cookies_bbc": {
+    "primary_selector": "button[data-testid='banner-accept-all'], button.gel-cta--primary",
+    "timeout": 4000,
+    "fallbacks": [
+      { "method": "text-contains", "value": "Accept all" },
+      { "method": "text-contains", "value": "I Agree" },
+      { "method": "text-contains", "value": "Continue" },
+      { "method": "xpath", "value": "//button[contains(translate(text(),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'accept')]" }
+    ]
+  },
+  "extract_bbc_article": {
+    "primary_selector": "[data-component='text-block'], .story-body__inner",
+    "timeout": 6000,
+    "fallbacks": [
+      { "method": "xpath", "value": "//div[@data-component='text-block']" },
+      { "method": "xpath", "value": "//div[contains(@class, 'story-body')]" },
+      { "method": "text-contains", "value": "story-body" }
+    ],
+    "metadata_selectors": {
+      "headline": "h1[data-component='headline'], h1.story-body__h1",
+      "summary": "[data-component='text-block'][data-component-name='introduction'], .story-body__introduction",
+      "author": "[data-component='byline'], .byline__name",
+      "timestamp": "time[datetime], [data-component='timestamp']",
+      "category": "[data-component='tag'], .story-body__tags a",
+      "image": "[data-component='image'] img, .story-body__image img",
+      "image_caption": "[data-component='caption'], .story-body__caption"
+    }
   }
 }

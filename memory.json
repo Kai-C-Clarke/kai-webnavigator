@@ -1,1 +1,14 @@
-{}
+{
+  "google.com": {
+    "click_gmail": {
+      "successful_selector": "memory: fallback: text-contains",
+      "last_used": "2025-06-30T14:14:19.953735Z"
+    }
+  },
+  "bbc.co.uk": {
+    "click_search_bar": {
+      "successful_selector": "memory: fallback: text-contains",
+      "last_used": "2025-06-30T20:38:39.950165Z"
+    }
+  }
+}

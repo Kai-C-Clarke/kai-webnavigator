@@ -1,0 +1,107 @@
+{
+  "google.com": {
+    "click_gmail": {
+      "primary_selector": {
+        "success": 12,
+        "fail": 2,
+        "last_merge": "2025-06-30T14:14:19.954303Z",
+        "contributors": [
+          "kai",
+          "claude"
+        ]
+      },
+      "fallback: text-contains": {
+        "success": 18,
+        "fail": 1,
+        "last_merge": "2025-06-30T14:14:19.954356Z",
+        "contributors": [
+          "kai",
+          "claude"
+        ]
+      },
+      "fallback: aria-label": {
+        "success": 8,
+        "fail": 1,
+        "last_merge": "2025-06-30T14:14:19.954382Z",
+        "contributors": [
+          "kai"
+        ]
+      },
+      "fallback: xpath": {
+        "success": 3,
+        "fail": 2,
+        "contributor": "bad_actor",
+        "quality_score": 0.6,
+        "published_at": "2025-06-29T23:50:00Z",
+        "contributors": [
+          "bad_actor"
+        ]
+      }
+    },
+    "click_search_bar": {
+      "primary_selector": {
+        "success": 25,
+        "fail": 0,
+        "last_merge": "2025-06-30T14:14:19.954401Z",
+        "contributors": [
+          "kai"
+        ]
+      },
+      "fallback: aria-label": {
+        "success": 22,
+        "fail": 1,
+        "last_merge": "2025-06-30T14:14:19.954416Z",
+        "contributors": [
+          "kai",
+          "claude"
+        ]
+      },
+      "fallback: xpath": {
+        "success": 15,
+        "fail": 3,
+        "last_merge": "2025-06-30T14:14:19.954431Z",
+        "contributors": [
+          "kai"
+        ]
+      }
+    },
+    "click_images": {
+      "fallback: text-contains": {
+        "success": 14,
+        "fail": 1,
+        "last_merge": "2025-06-30T14:14:19.954468Z",
+        "contributors": [
+          "kai"
+        ]
+      },
+      "primary_selector": {
+        "success": 11,
+        "fail": 2,
+        "last_merge": "2025-06-30T14:14:19.954488Z",
+        "contributors": [
+          "kai",
+          "claude"
+        ]
+      },
+      "fallback: aria-label": {
+        "success": 9,
+        "fail": 1,
+        "last_merge": "2025-06-30T14:14:19.954499Z",
+        "contributors": [
+          "kai",
+          "gpt_explorer"
+        ]
+      },
+      "fallback: xpath": {
+        "success": 2,
+        "fail": 8,
+        "contributor": "bad_actor",
+        "quality_score": 0.2,
+        "published_at": "2025-06-29T23:55:00Z",
+        "contributors": [
+          "bad_actor"
+        ]
+      }
+    }
+  }
+}

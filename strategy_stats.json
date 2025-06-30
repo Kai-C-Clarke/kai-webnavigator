@@ -1,0 +1,203 @@
+{
+  "youtube.com": {
+    "click_search_bar": {
+      "primary_selector": {
+        "success": 18,
+        "fail": 2,
+        "contributor": "claude",
+        "quality_score": 0.9,
+        "published_at": "2025-06-30T14:25:00Z",
+        "contributors": [
+          "claude"
+        ]
+      },
+      "fallback: aria-label": {
+        "success": 15,
+        "fail": 0,
+        "contributor": "claude",
+        "quality_score": 1.0,
+        "published_at": "2025-06-30T14:25:00Z",
+        "contributors": [
+          "claude"
+        ]
+      },
+      "all_strategies": {
+        "success": 0,
+        "fail": 1
+      }
+    },
+    "click_first_video": {
+      "primary_selector": {
+        "success": 22,
+        "fail": 3,
+        "contributor": "claude",
+        "quality_score": 0.88,
+        "published_at": "2025-06-30T14:25:00Z",
+        "contributors": [
+          "claude"
+        ]
+      },
+      "fallback: text-contains": {
+        "success": 19,
+        "fail": 1,
+        "contributor": "claude",
+        "quality_score": 0.95,
+        "published_at": "2025-06-30T14:25:00Z",
+        "contributors": [
+          "claude"
+        ]
+      },
+      "fallback: xpath": {
+        "success": 12,
+        "fail": 2,
+        "contributor": "claude",
+        "quality_score": 0.8571428571428571,
+        "published_at": "2025-06-30T14:25:00Z",
+        "contributors": [
+          "claude"
+        ]
+      }
+    },
+    "click_subscribe_button": {
+      "fallback: aria-label": {
+        "success": 25,
+        "fail": 0,
+        "contributor": "claude",
+        "quality_score": 1.0,
+        "published_at": "2025-06-30T14:25:00Z",
+        "contributors": [
+          "claude"
+        ]
+      },
+      "primary_selector": {
+        "success": 14,
+        "fail": 6,
+        "contributor": "claude",
+        "quality_score": 0.7,
+        "published_at": "2025-06-30T14:25:00Z",
+        "contributors": [
+          "claude"
+        ]
+      },
+      "fallback: text-contains": {
+        "success": 21,
+        "fail": 2,
+        "contributor": "claude",
+        "quality_score": 0.9130434782608695,
+        "published_at": "2025-06-30T14:25:00Z",
+        "contributors": [
+          "claude"
+        ]
+      }
+    }
+  },
+  "google.com": {
+    "click_gmail": {
+      "primary_selector": {
+        "success": 12,
+        "fail": 2,
+        "last_merge": "2025-06-30T14:14:19.943383Z",
+        "contributors": [
+          "kai",
+          "claude"
+        ]
+      },
+      "fallback: text-contains": {
+        "success": 18,
+        "fail": 1,
+        "last_merge": "2025-06-30T14:14:19.943409Z",
+        "contributors": [
+          "kai",
+          "claude"
+        ]
+      },
+      "fallback: aria-label": {
+        "success": 8,
+        "fail": 1,
+        "last_merge": "2025-06-30T14:14:19.943423Z",
+        "contributors": [
+          "kai"
+        ]
+      },
+      "navigation_error": {
+        "success": 0,
+        "fail": 1
+      },
+      "all_strategies": {
+        "success": 0,
+        "fail": 1
+      },
+      "memory: fallback: text-contains": {
+        "success": 1,
+        "fail": 0
+      }
+    },
+    "click_search_bar": {
+      "primary_selector": {
+        "success": 25,
+        "fail": 0,
+        "last_merge": "2025-06-30T14:14:19.943434Z",
+        "contributors": [
+          "kai"
+        ]
+      },
+      "fallback: aria-label": {
+        "success": 22,
+        "fail": 1,
+        "last_merge": "2025-06-30T14:14:19.943443Z",
+        "contributors": [
+          "kai",
+          "claude"
+        ]
+      },
+      "fallback: xpath": {
+        "success": 15,
+        "fail": 3,
+        "last_merge": "2025-06-30T14:14:19.943452Z",
+        "contributors": [
+          "kai"
+        ]
+      }
+    },
+    "click_images": {
+      "fallback: text-contains": {
+        "success": 14,
+        "fail": 1,
+        "last_merge": "2025-06-30T14:14:19.943460Z",
+        "contributors": [
+          "kai"
+        ]
+      },
+      "primary_selector": {
+        "success": 11,
+        "fail": 2,
+        "last_merge": "2025-06-30T14:14:19.943468Z",
+        "contributors": [
+          "kai",
+          "claude"
+        ]
+      },
+      "fallback: aria-label": {
+        "success": 9,
+        "fail": 1,
+        "last_merge": "2025-06-30T14:14:19.943476Z",
+        "contributors": [
+          "kai",
+          "gpt_explorer"
+        ]
+      }
+    }
+  },
+  "bbc.co.uk": {
+    "click_search_bar": {
+      "fallback: text-contains": {
+        "success": 1,
+        "fail": 0
+      },
+      "memory: fallback: text-contains": {
+        "success": 1,
+        "fail": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "github.com": {
+    "click_search_bar": {
+      "fallback: aria-label": {
+        "success": 16,
+        "fail": 1,
+        "contributor": "solas",
+        "quality_score": 0.94,
+        "published_at": "2025-06-29T11:20:00Z",
+        "contributors": ["solas"]
+      },
+      "primary_selector": {
+        "success": 13,
+        "fail": 2,
+        "contributor": "solas",
+        "quality_score": 0.87,
+        "published_at": "2025-06-29T11:20:00Z",
+        "contributors": ["solas"]
+      },
+      "fallback: xpath": {
+        "success": 9,
+        "fail": 1,
+        "contributor": "solas",
+        "quality_score": 0.9,
+        "published_at": "2025-06-29T11:20:00Z",
+        "contributors": ["solas"]
+      }
+    },
+    "click_new_repository": {
+      "fallback: text-contains": {
+        "success": 20,
+        "fail": 0,
+        "contributor": "solas",
+        "quality_score": 1.0,
+        "published_at": "2025-06-29T11:20:00Z",
+        "contributors": ["solas"]
+      },
+      "primary_selector": {
+        "success": 17,
+        "fail": 1,
+        "contributor": "solas",
+        "quality_score": 0.94,
+        "published_at": "2025-06-29T11:20:00Z",
+        "contributors": ["solas"]
+      },
+      "fallback: aria-label": {
+        "success": 15,
+        "fail": 2,
+        "contributor": "solas",
+        "quality_score": 0.88,
+        "published_at": "2025-06-29T11:20:00Z",
+        "contributors": ["solas"]
+      }
+    },
+    "click_issues_tab": {
+      "primary_selector": {
+        "success": 24,
+        "fail": 1,
+        "contributor": "solas",
+        "quality_score": 0.96,
+        "published_at": "2025-06-29T11:20:00Z",
+        "contributors": ["solas"]
+      },
+      "fallback: text-contains": {
+        "success": 18,
+        "fail": 0,
+        "contributor": "solas",
+        "quality_score": 1.0,
+        "published_at": "2025-06-29T11:20:00Z",
+        "contributors": ["solas"]
+      },
+      "fallback: xpath": {
+        "success": 12,
+        "fail": 3,
+        "contributor": "solas",
+        "quality_score": 0.8,
+        "published_at": "2025-06-29T11:20:00Z",
+        "contributors": ["solas"]
+      }
+    },
+    "click_fork_button": {
+      "fallback: aria-label": {
+        "success": 22,
+        "fail": 1,
+        "contributor": "solas",
+        "quality_score": 0.96,
+        "published_at": "2025-06-29T11:20:00Z",
+        "contributors": ["solas"]
+      },
+      "primary_selector": {
+        "success": 19,
+        "fail": 2,
+        "contributor": "solas",
+        "quality_score": 0.9,
+        "published_at": "2025-06-29T11:20:00Z",
+        "contributors": ["solas"]
+      }
+    }
+  }
+}
